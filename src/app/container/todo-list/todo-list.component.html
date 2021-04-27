@@ -1,0 +1,11 @@
+<div class="todo-list-container">
+  <div class="todo-list-header">
+    <h1>Todo List</h1>
+    <div class="todo-list-add-button">
+      <fa-icon [icon]="faPlus"></fa-icon>
+    </div>
+  </div>
+  <div class="todo-list-body">
+    <app-todo-item *ngFor="let todo of todoList$ | async" [todo]="todo" (deleteClicked)="handleDeleteClick($event)" (checked)="handleCheck($event)" (copied)="handleCopy($event)"></app-todo-item>
+  </div>
+</div>

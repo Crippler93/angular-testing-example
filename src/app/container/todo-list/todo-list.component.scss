@@ -1,0 +1,27 @@
+.todo-list-container {
+  padding: 1rem;
+  background-color: #eee;
+  border-radius: 15px;
+  min-width: 500px;
+  border: 1px solid black;
+
+  .todo-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .todo-list-add-button {
+      background-color: rgb(66, 167, 74);
+      padding: 0.8rem;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+  .todo-list-body {
+    app-todo-item {
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}

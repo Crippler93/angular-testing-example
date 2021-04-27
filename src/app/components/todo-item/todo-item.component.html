@@ -1,0 +1,16 @@
+<div class="todo-item">
+  <div [ngClass]="{'todo-item-text': true, 'checked': todo.done}">
+    {{todo.name}}
+  </div>
+  <div class="todo-item-actions">
+    <div class="todo-item-action check" (click)="handleCheckClick(todo.id)">
+      <fa-icon [icon]="faCheck" [ngClass]="{'checked': todo.done}"></fa-icon>
+    </div>
+    <div class="todo-item-action delete" (click)="handleDeleteClick(todo.id)">
+      <fa-icon [icon]="faTrash"></fa-icon>
+    </div>
+    <div class="todo-item-action copy" (click)="handleCopyClick(todo.id)">
+      <fa-icon [icon]="faCopy"></fa-icon>
+    </div>
+  </div>
+</div>
