@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { mockTodos } from 'src/app/testing/mock/todo';
 
 import { TodoItemComponent } from './todo-item.component';
 
@@ -8,7 +10,8 @@ describe('TodoItemComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TodoItemComponent ]
+      declarations: [ TodoItemComponent ],
+      imports: [FontAwesomeModule]
     })
     .compileComponents();
   });
@@ -16,6 +19,7 @@ describe('TodoItemComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(TodoItemComponent);
     component = fixture.componentInstance;
+    component.todo = mockTodos[0]
     fixture.detectChanges();
   });
 

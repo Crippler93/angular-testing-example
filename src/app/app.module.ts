@@ -11,7 +11,7 @@ import { TodoItemComponent } from './components/todo-item/todo-item.component';
   declarations: [
     AppComponent,
     TodoListComponent,
-    TodoItemComponent
+    TodoItemComponent,
   ],
   imports: [
     BrowserModule,
