@@ -18,7 +18,6 @@ export class TodoListComponent implements OnInit {
 
   ngOnInit(): void {
     this.todoService.requestTodos();
-
     this.todoList$ = this.todoService.getTodos()
   }
 

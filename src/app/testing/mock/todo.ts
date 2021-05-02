@@ -9,7 +9,7 @@ export const mockTodos: Todo[] = [
   },
   {
     done: true,
-    id: 1,
+    id: 2,
     name: 'Test TODO 2'
   }
 ]
